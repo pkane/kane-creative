@@ -21,11 +21,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Building the
-                <br />
-                future of
-                <br />
-                <span className="text-foreground/40">digital</span>
+              We make <span className="text-foreground/40">small businesses</span> impossible to ignore.
               </h2>
             </div>
 
@@ -36,11 +32,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                We're a collective of designers, developers, and creative technologists obsessed with crafting
-                exceptional digital experiences.
+              Kane Creative was built on one belief: that small businesses deserve world-class creative work. Not templates. Not shortcuts. Real craft, applied to everything from your homepage to your business card.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Every project is an opportunity to explore new possibilities and push creative boundaries.
+              We're a small studio with a big obsession — building digital experiences that feel effortless to your customers and meaningful to your business.
               </p>
             </div>
           </div>

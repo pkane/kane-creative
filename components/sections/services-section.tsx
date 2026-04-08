@@ -17,7 +17,7 @@ export function ServicesSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Capabilities
+            Our Services
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">/ What we bring to the table</p>
         </div>
@@ -25,23 +25,23 @@ export function ServicesSection() {
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Creative Development",
-              description: "Pushing the boundaries of what's possible on the web",
+              title: "Web Design",
+              description: "The internet has plenty of forgettable websites. Yours won't be one of them. We design and build sites that feel as good as they look — fast, purposeful, and built to convert.",
               direction: "top",
             },
             {
               title: "Visual Design",
-              description: "Crafting memorable experiences through thoughtful aesthetics",
+              description: "Design that stops the scroll. From layouts to imagery to typography, every visual decision is intentional. We create work that's distinctly yours.",
               direction: "right",
             },
             {
-              title: "Motion & Animation",
-              description: "Bringing interfaces to life with purposeful movement",
+              title: "Brand Identity",
+              description: "Your brand is more than a logo. But we'll nail that too. Full identity systems — logo, color, type, print, and digital — built to stay consistent everywhere your business shows up.",
               direction: "left",
             },
             {
-              title: "Technical Strategy",
-              description: "Building scalable solutions that perform beautifully",
+              title: "Digital Solutions",
+              description: "Strategy that works behind the scenes. Site architecture, SEO, and web strategy to make sure people find you, trust you, and come back.",
               direction: "bottom",
             },
           ].map((service, i) => (
