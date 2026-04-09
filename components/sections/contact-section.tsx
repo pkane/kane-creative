@@ -42,7 +42,7 @@ export function ContactSection() {
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start items-center px-4 pt-20 md:px-12 md:pt-0 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start items-center px-4 pt-16 md:px-12 md:pt-0 lg:px-16"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:gap-16 lg:gap-24">
@@ -53,7 +53,7 @@ export function ContactSection() {
               }`}
             >
               <h2 className="font-sans text-4xl font-light leading-[1.05] tracking-tight text-foreground/40 md:mb-3 md:text-7xl lg:text-8xl">
-              Let's <span className="text-foreground">talk <br /> shop</span>.
+              Let's <span className="text-foreground">talk <br />shop.</span>
               </h2>
               <p className="hidden md:block font-mono text-xs text-foreground/60 md:text-base">/ Get in touch</p>
             </div>
@@ -85,10 +85,10 @@ export function ContactSection() {
                   <MapPin className="h-3 w-3 text-foreground/60" />
                   <span className="font-mono text-xs text-foreground/60">Location</span>
                 </div>
-                <p className="text-base text-foreground md:text-2xl">New York, NY</p>
+                <p className="text-base text-foreground md:text-2xl">Fairfax, VA</p>
               </div>
 
-              <div
+              {/* <div
                 className={`flex gap-2 pt-2 transition-all duration-700 md:pt-4 ${
                   isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
                 }`}
@@ -103,7 +103,7 @@ export function ContactSection() {
                     {social}
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 

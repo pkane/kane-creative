@@ -8,7 +8,7 @@ export function ServicesSection() {
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start items-center px-6 pt-20 md:px-12 md:pt-0 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start items-center px-6 pt-16 md:px-12 md:pt-0 lg:px-16"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
@@ -95,7 +95,7 @@ function ServiceCard({
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
         <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
       </div>
-      <h3 className="mb-2 font-sans text-2xl font-light text-foreground md:text-3xl">{service.title}</h3>
+      <h3 className="mb-2 font-sans text-xl font-light text-foreground md:text-3xl">{service.title}</h3>
       <p className="max-w-sm text-sm text-pretty leading-relaxed text-foreground/80 md:hidden">{service.shortDescription}</p>
       <p className="hidden max-w-sm text-sm leading-relaxed text-foreground/80 md:block md:text-base">{service.description}</p>
     </div>
