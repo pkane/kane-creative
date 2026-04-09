@@ -20,7 +20,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                 isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
               }`}
             >
-              <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
+              <h2 className="mb-3 font-sans text-3xl font-light text-pretty leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
               We make <span className="text-foreground/40">small businesses</span> impossible to ignore.
               </h2>
             </div>
@@ -34,7 +34,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
               Kane Creative was built on one belief: that small businesses deserve world-class creative work. Not templates. Not shortcuts. Real craft, applied to everything from your homepage to your business card.
               </p>
-              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
+              <p className="hidden md:block max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
               We're a small studio with a big obsession — building digital experiences that feel effortless to your customers and meaningful to your business.
               </p>
             </div>
@@ -43,9 +43,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "150+", label: "Projects", sublabel: "Delivered worldwide", direction: "right" },
-              { value: "8", label: "Years", sublabel: "Of innovation", direction: "left" },
-              { value: "12", label: "Awards", sublabel: "Industry recognition", direction: "right" },
+              { value: "33", label: "Years", sublabel: "combined experience", direction: "right" },
+              { value: "2", label: "Designers", sublabel: "who've shipped at scale", direction: "left" },
+              { value: "6", label: "World-class companies", sublabel: "in our DNA", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -64,7 +64,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                     maxWidth: i % 2 === 0 ? "100%" : "85%",
                   }}
                 >
-                  <div className="text-3xl font-light text-foreground md:text-6xl lg:text-7xl">{stat.value}</div>
+                  <div className="text-3xl font-light text-foreground md:text-6xl lg:text-7xl translate-y-[.25em]">{stat.value}</div>
                   <div>
                     <div className="font-sans text-base font-light text-foreground md:text-xl">{stat.label}</div>
                     <div className="font-mono text-xs text-foreground/60">{stat.sublabel}</div>

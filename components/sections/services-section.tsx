@@ -12,36 +12,40 @@ export function ServicesSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-12 transition-all duration-700 md:mb-16 ${
+          className={`mb-6 transition-all duration-700 md:mb-16 ${
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
           }`}
         >
-          <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <h2 className="font-sans text-4xl md:text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Our Services
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ What we bring to the table</p>
+          <p className="hidden md:block font-mono text-sm text-foreground/60 md:text-base">/ What we bring to the table</p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
               title: "Web Design",
               description: "The internet has plenty of forgettable websites. Yours won't be one of them. We design and build sites that feel as good as they look — fast, purposeful, and built to convert.",
+              shortDescription: "We design and build sites that feel as good as they look.",
               direction: "top",
             },
             {
               title: "Visual Design",
               description: "Design that stops the scroll. From layouts to imagery to typography, every visual decision is intentional. We create work that's distinctly yours.",
+              shortDescription: "From layouts to imagery to typography, every visual decision is intentional.",
               direction: "right",
             },
             {
               title: "Brand Identity",
               description: "Your brand is more than a logo. But we'll nail that too. Full identity systems — logo, color, type, print, and digital — built to stay consistent everywhere your business shows up.",
+              shortDescription: "Full identity systems — logo, color, type, print, and digital.",
               direction: "left",
             },
             {
               title: "Digital Solutions",
               description: "Strategy that works behind the scenes. Site architecture, SEO, and web strategy to make sure people find you, trust you, and come back.",
+              shortDescription: "SEO and web strategy to make sure people find and trust you.",
               direction: "bottom",
             },
           ].map((service, i) => (
@@ -58,7 +62,7 @@ function ServiceCard({
   index,
   isVisible,
 }: {
-  service: { title: string; description: string; direction: string }
+  service: { title: string; description: string; shortDescription: string; direction: string }
   index: number
   isVisible: boolean
 }) {
@@ -92,7 +96,8 @@ function ServiceCard({
         <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
       </div>
       <h3 className="mb-2 font-sans text-2xl font-light text-foreground md:text-3xl">{service.title}</h3>
-      <p className="max-w-sm text-sm leading-relaxed text-foreground/80 md:text-base">{service.description}</p>
+      <p className="max-w-sm text-sm text-pretty leading-relaxed text-foreground/80 md:hidden">{service.shortDescription}</p>
+      <p className="hidden max-w-sm text-sm leading-relaxed text-foreground/80 md:block md:text-base">{service.description}</p>
     </div>
   )
 }
