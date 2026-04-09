@@ -279,11 +279,11 @@ export default function Home() {
               <MagneticButton
                 size="lg"
                 variant="primary"
-                onClick={() => scrollToSection(3)}
+                onClick={() => scrollToSection(4)}
               >
                 Start a Project
               </MagneticButton>
-              <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(2)}>
+              <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(3)}>
                 About Us
               </MagneticButton>
             </div>
@@ -296,20 +296,20 @@ export default function Home() {
                 <div className="h-2 w-2 animate-pulse rounded-full bg-foreground/80" />
               </div>
             </div>
-          </div> */}
+          </div> */}              
         </section>
 
         <ServicesSection />
         <WorkSection />
         <AboutSection scrollToSection={scrollToSection} />
-        <ContactSection />
+        <ContactSection />    
       </div>
 
       <style jsx global>{`
         div::-webkit-scrollbar {
           display: none;
         }
-      `}</style>
+      `}</style>   
     </main>
   )
 }

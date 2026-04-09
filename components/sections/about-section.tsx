@@ -76,14 +76,16 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
         </div>
 
         <div
-          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-16 md:gap-4 ${
+          className={`mt-8 flex flex-wrap justify-end gap-3 transition-all duration-700 md:mt-16 md:gap-4 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
           }`}
-          style={{ transitionDelay: "750ms" }}
+          style={{ transitionDelay: "1200ms" }}
         >
-          <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
+          {/* <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
             Start a Project
-          </MagneticButton>
+          </MagneticButton> */}
+          <p className="font-mono text-xs text-foreground/80">© 2026 Kane Creative, LLC </p>
+
           {/* <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
             View Our Work
           </MagneticButton> */}
