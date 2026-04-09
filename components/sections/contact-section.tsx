@@ -14,22 +14,29 @@ export function ContactSection() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       return
     }
 
     setIsSubmitting(true)
 
-    // Simulate form submission (replace with actual API call later)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
-    setFormData({ name: "", email: "", message: "" })
+      if (!res.ok) throw new Error("Failed to send")
 
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitSuccess(false), 5000)
+      setSubmitSuccess(true)
+      setFormData({ name: "", email: "", message: "" })
+      setTimeout(() => setSubmitSuccess(false), 5000)
+    } catch {
+      // handle error silently
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -45,15 +52,15 @@ export function ContactSection() {
                 isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
               }`}
             >
-              <h2 className="font-sans text-4xl font-light leading-[1.05] tracking-tight text-foreground md:mb-3 md:text-7xl lg:text-8xl">
-              Let's talk <br /> shop.
+              <h2 className="font-sans text-4xl font-light leading-[1.05] tracking-tight text-foreground/40 md:mb-3 md:text-7xl lg:text-8xl">
+              Let's <span className="text-foreground">talk <br /> shop</span>.
               </h2>
               <p className="hidden md:block font-mono text-xs text-foreground/60 md:text-base">/ Get in touch</p>
             </div>
 
             <div className="space-y-4 md:space-y-8">
               <a
-                href="mailto:hello@studio.com"
+                href="mailto:hello@kane-creative.com"
                 className={`group block transition-all duration-700 ${
                   isVisible ? "translate-x-0 opacity-100" : "-translate-x-16 opacity-0"
                 }`}
@@ -64,7 +71,7 @@ export function ContactSection() {
                   <span className="font-mono text-xs text-foreground/60">Email</span>
                 </div>
                 <p className="text-base text-foreground transition-colors group-hover:text-foreground/70 md:text-2xl">
-                  hello@studio.com
+                  hello@kane-creative.com
                 </p>
               </a>
 

@@ -20,8 +20,8 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                 isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
               }`}
             >
-              <h2 className="mb-3 font-sans text-3xl font-light text-pretty leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-              We make <span className="text-foreground/40">small businesses</span> impossible to ignore.
+              <h2 className="mb-3 font-sans text-3xl font-light text-pretty leading-[1.1] tracking-tight text-foreground/40 md:mb-4 md:text-6xl lg:text-7xl">
+              We make <span className="text-foreground">small businesses</span> impossible to ignore.
               </h2>
             </div>
 

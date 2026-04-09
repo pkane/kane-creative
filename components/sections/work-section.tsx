@@ -16,33 +16,37 @@ export function WorkSection() {
             isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
           }`}
         >
-          <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Featured
+          <h2 className="font-sans text-4xl md:text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
+            Featured Projects
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Recent explorations</p>
+          <p className="hidden md:block font-mono text-sm text-foreground/60 md:text-base">/ Recent explorations</p>
         </div>
 
         <div className="space-y-6 md:space-y-8">
           {[
+            // {
+            //   number: "01",
+            //   title: "Kinetic Typography",
+            //   category: "Interactive Experience",
+            //   year: "2024",
+            //   direction: "left",
+            // },
+            // {
+            //   number: "02",
+            //   title: "Generative Patterns",
+            //   category: "Visual System",
+            //   year: "2024",
+            //   direction: "right",
+            // },
+            // {
+            //   number: "03",
+            //   title: "Spatial Interface",
+            //   category: "3D Navigation",
+            //   year: "2023",
+            //   direction: "left",
+            // },
             {
-              number: "01",
-              title: "Kinetic Typography",
-              category: "Interactive Experience",
-              year: "2024",
-              direction: "left",
-            },
-            {
-              number: "02",
-              title: "Generative Patterns",
-              category: "Visual System",
-              year: "2024",
-              direction: "right",
-            },
-            {
-              number: "03",
-              title: "Spatial Interface",
-              category: "3D Navigation",
-              year: "2023",
+              title: "Coming Soon",
               direction: "left",
             },
           ].map((project, i) => (
@@ -59,7 +63,7 @@ function ProjectCard({
   index,
   isVisible,
 }: {
-  project: { number: string; title: string; category: string; year: string; direction: string }
+  project: { number: string | undefined; title: string; category: string | undefined; year: string | undefined; direction: string }
   index: number
   isVisible: boolean
 }) {
