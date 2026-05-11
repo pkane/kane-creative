@@ -78,6 +78,8 @@
   /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-noto: "Noto Sans", "Noto Sans Fallback";
+  --font-source-serif: "Source Serif 4", "serif";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

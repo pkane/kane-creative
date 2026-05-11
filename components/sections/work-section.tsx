@@ -16,7 +16,7 @@ export function WorkSection() {
             isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
           }`}
         >
-          <h2 className="font-sans text-4xl md:text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <h2 className="font-source-serif text-4xl md:text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Featured Projects
           </h2>
           <p className="hidden md:block font-mono text-sm text-foreground/60 md:text-base">/ Recent explorations</p>
@@ -88,7 +88,7 @@ function ProjectCard({
           {project.number}
         </span>
         <div>
-          <h3 className="mb-1 font-sans text-2xl font-light text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">
+          <h3 className="mb-1 font-source-serif text-2xl font-light text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">
             {project.title}
           </h3>
           <p className="font-mono text-xs text-foreground/50 md:text-sm">{project.category}</p>

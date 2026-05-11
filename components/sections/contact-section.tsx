@@ -52,7 +52,7 @@ export function ContactSection() {
                 isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
               }`}
             >
-              <h2 className="font-sans text-4xl font-light leading-[1.05] tracking-tight text-foreground/40 md:mb-3 md:text-7xl lg:text-8xl">
+              <h2 className="font-source-serif text-4xl font-light tracking-tight text-foreground/40 md:mb-3 md:text-7xl lg:text-8xl">
               Let's <span className="text-foreground">talk <br />shop.</span>
               </h2>
               <p className="hidden md:block font-mono text-xs text-foreground/60 md:text-base">/ Get in touch</p>
