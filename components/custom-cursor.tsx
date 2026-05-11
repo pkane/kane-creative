@@ -1,6 +1,8 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+
+const finePointerHoverQuery = "(pointer: fine) and (hover: hover)"
 
 export function CustomCursor() {
   const outerRef = useRef<HTMLDivElement>(null)
@@ -8,8 +10,19 @@ export function CustomCursor() {
   const positionRef = useRef({ x: 0, y: 0 })
   const targetPositionRef = useRef({ x: 0, y: 0 })
   const isPointerRef = useRef(false)
+  const [useCustomCursor, setUseCustomCursor] = useState(false)
 
   useEffect(() => {
+    const mq = window.matchMedia(finePointerHoverQuery)
+    const sync = () => setUseCustomCursor(mq.matches)
+    sync()
+    mq.addEventListener("change", sync)
+    return () => mq.removeEventListener("change", sync)
+  }, [])
+
+  useEffect(() => {
+    if (!useCustomCursor) return
+
     let animationFrameId: number
 
     const lerp = (start: number, end: number, factor: number) => {
@@ -46,7 +59,9 @@ export function CustomCursor() {
       window.removeEventListener("mousemove", handleMouseMove)
       cancelAnimationFrame(animationFrameId)
     }
-  }, [])
+  }, [useCustomCursor])
+
+  if (!useCustomCursor) return null
 
   return (
     <>
