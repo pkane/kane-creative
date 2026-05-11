@@ -175,7 +175,9 @@ export default function Home() {
 
   return (
     <main className="relative h-screen w-full overflow-hidden bg-background">
-      <CustomCursor />
+      <div className="invisible md:visible">
+        <CustomCursor />
+      </div>
       <GrainOverlay />
 
       <div
